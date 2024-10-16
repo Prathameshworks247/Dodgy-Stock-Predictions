@@ -14,12 +14,10 @@ function App() {
   const [apiMessage, setApiMessage] = useState('');
   const [report, setReport] = useState('');
 
-  // Add a new ticker to the list
   const addTicker = (ticker) => {
     setTickers((prevTickers) => [...prevTickers, ticker]);
   };
 
-  // Fetch stock data when tickers change
   useEffect(() => {
     if (tickers.length === 0) return;
 
@@ -48,7 +46,6 @@ function App() {
     fetchStockData();
   }, [tickers]);
 
-  // Generate the report based on fetched data
   const fetchReport = (data) => {
     const combinedData = data.map((item) => JSON.stringify(item)).join('\n');
     setReport(`Report generated:\n${combinedData}`);
@@ -61,7 +58,7 @@ function App() {
       <TickerDisplay tickers={tickers} />
       <button
         className="generate-report-btn"
-        onClick={() => setTickers([...tickers])} // Force re-fetch when clicked
+        onClick={() => setTickers([...tickers])}
         disabled={tickers.length === 0}
       >
         Generate Report
