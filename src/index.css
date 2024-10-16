@@ -1,0 +1,84 @@
+.App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+.btn {
+    width: 30px;  /* Adjust width */
+    height: 30px;  /* Adjust height */
+    padding: 5px 10px;  /* Controls inner spacing */
+    font-size: 30px;  /* Smaller text */
+    border-radius: 5px;  /* Optional rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.generate-report-btn{
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  border-radius: 10px;
+  border-style:none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 6rem;
+  width: 12rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(33, 4, 4, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-36:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+  .button-36 {
+    padding: 0 2.6rem;
+  }
+}
+
+.border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+
+}  
+.ticker-choice-display {
+    margin-top: 10px;
+}
+  
+.ticker {
+    margin: 0 5px;
+    padding: 5px;
+    background-color: #eee;
+    border-radius: 4px;
+}
+  
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+  
+.loading-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+  
