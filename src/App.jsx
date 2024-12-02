@@ -28,7 +28,8 @@ function App() {
       try {
         const stockData = await Promise.all(
           tickers.map(async (ticker) => {
-            const url = `https://api.polygon.io/v2/aggs/ticker/${ticker}/range/1/day/${dates.startDate}/${dates.endDate}?apiKey=${process.env.POLYGON_API_KEY}`;
+            const url = `https://api.polygon.io/v2/aggs/ticker/${ticker}/range/1/day/${dates.startDate}/${dates.endDate}?apiKey=${process.env.dzfnYx_1p4M3M7zrQYuSKFom6DXo3c5m}`;
+            //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
             const response = await axios.get(url);
             return response.data;
           })
