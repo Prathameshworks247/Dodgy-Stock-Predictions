@@ -15,7 +15,7 @@ It is a playful project that uses a Generative AI model to provide stock suggest
    ```
 2. **Navigate to the Project Directory**:
    ```bash
-   cd Dodgy-Stock-Predicitons
+   cd Dodgy-Stock-Predictions
    ```
 3. **Install Dependencies**:
    ```bash
@@ -25,10 +25,11 @@ It is a playful project that uses a Generative AI model to provide stock suggest
 ## Usage
 1. **Run the Application**:
    ```bash
-   npm start
+   npm run dev
    ```
-2. **Access the Web Interface**: Open your web browser and navigate to `http://localhost:3000`.
-3. **Get Stock Suggestions**: Click the "Get Suggestion" button to receive a randomly generated stock pick.
+2. **Create your Gemini and Polygon API keys and save it in a .env file as an environment variable
+3. **Access the Web Interface**: Open your web browser and navigate to `http://localhost:3000`.
+4. **Get Stock Suggestions**: Click the "Generate Report" button to receive a randomly generated stock pick.
 
 ## Disclaimer
 This project is intended for educational and entertainment purposes only. The stock suggestions provided are not reliable for financial decision-making. Use at your own risk.
@@ -42,10 +43,10 @@ This project is intended for educational and entertainment purposes only. The st
 Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. Please take a look at the [LICENSE](LICENSE) file for details.
 
 ## Contact
-For any questions or feedback, please contact [your email].
+For any questions or feedback, don't hesitate to get in touch with prathameshworks247@gmail.com.
 
 ---
 
