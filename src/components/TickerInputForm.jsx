@@ -19,7 +19,7 @@ export default function TickerInputForm({ addTicker, tickers }) {
   return (
     <form onSubmit={handleSubmit} className='form'>
       <label htmlFor="ticker-input">
-        <h3>Add up to 3 stock tickers to get a super accurate stock predictions report👇</h3>
+        <h3 className='text-white'>Add up to 3 stock tickers to get a super accurate stock predictions report👇</h3>
       </label>
       <div className="border border-black">
         <input

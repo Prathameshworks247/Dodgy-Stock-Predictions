@@ -1,3 +1,12 @@
+body {
+  background-image: url('./assets/6379114.jpg');
+  background-repeat: no-repeat; 
+  background-size: cover; /* Make the image cover the entire screen */
+  background-position: center; /* Center the image */
+  background-attachment: fixed; /* Optional: Make the background static */
+  margin: 0; /* Remove default margin */
+  height: 100vh; /* Set height to 100% of the viewport */
+}
 .App{
     display: flex;
     justify-content: center;
@@ -49,10 +58,11 @@
   }
 }
 
-.border {
+.report {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 .form{
     display: flex;
@@ -62,14 +72,49 @@
 .ticker-choice-display {
     margin-top: 10px;
 }
-  
-.ticker {
-    margin: 0 5px;
-    padding: 5px;
-    background-color: #eee;
-    border-radius: 4px;
+
+.text-container {
+  position: relative;
+  display: inline-block;
+  padding: 8px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
-  
+
+.text {
+  display: inline-block;
+}
+
+.close-btn {
+  position: absolute;
+  top: -5px; /* Position it at the corner */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+  background-color: #ff5c5c;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+.close-btn:hover {
+  background-color: #ff0000;
+}
+
+.border{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+} 
 button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
@@ -80,5 +125,9 @@ button:disabled {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+}
+.report {
+  display: flex;
+  flex-direction: column;
 }
   
