@@ -21,15 +21,24 @@ function App() {
   async function generateStockAnalysis(stockData) {
     try {
       // Format the data into a more readable structure for Gemini
-      const formattedData = stockData.map(stock => ({
-        ticker: stock.ticker,
-        startPrice: stock.data.results[0]?.c || 'N/A',
-        endPrice: stock.data.results[stock.data.results.length - 1]?.c || 'N/A',
-        totalVolume: stock.data.results.reduce((sum, day) => sum + day.v, 0),
-        percentageChange: ((stock.data.results[stock.data.results.length - 1]?.c - stock.data.results[0]?.c) / 
-                          stock.data.results[0]?.c * 100).toFixed(2) + '%'
-      }));
-
+      const formattedData = stockData.map(stock => {
+        const results = stock.data.results || [];
+        const startPrice = results[0]?.c || 'N/A';
+        const endPrice = results[results.length - 1]?.c || 'N/A';
+        const totalVolume = results.reduce((sum, day) => sum + (day.v || 0), 0);
+        const percentageChange = results.length > 1 && startPrice !== 'N/A'
+          ? (((endPrice - startPrice) / startPrice) * 100).toFixed(2) + '%'
+          : 'N/A';
+  
+        return {
+          ticker: stock.ticker,
+          startPrice,
+          endPrice,
+          totalVolume,
+          percentageChange,
+        };
+      });
+  
       const prompt = `As a stock market analyst, please provide a brief analysis of the following stocks:
       ${JSON.stringify(formattedData, null, 2)}
       
@@ -37,10 +46,10 @@ function App() {
       1. Overall market trend for each stock
       2. make it like a guru making prediction
       3. jokingly recommend whether to invest of not
-      4. make it at max 20 lines`;
-
+      4. make it at max 80 lines`;
+  
       const result = await model.generateContent(prompt);
-      console.log(result.response.text())
+      console.log(result.response.text());
       return result.response.text();
     } catch (error) {
       console.error('Error generating analysis:', error);
