@@ -46,7 +46,7 @@ function App() {
       1. Overall market trend for each stock
       2. make it like a guru making prediction
       3. jokingly recommend whether to invest of not
-      4. make it at max 80 lines`;
+      4. make it at max 20 lines`;
   
       const result = await model.generateContent(prompt);
       console.log(result.response.text());
