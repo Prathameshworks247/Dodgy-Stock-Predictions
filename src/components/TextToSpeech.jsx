@@ -66,7 +66,7 @@ const TextToSpeech = ({ text }) => {
       setVoices(availableVoices);
 
       const defaultVoice = availableVoices.find(
-        (voice) => voice.name === 'Google UK English Male' 
+        (voice) => voice.name === 'Google US English' 
       );
       setSelectedVoice(defaultVoice || availableVoices[0]);
     };
