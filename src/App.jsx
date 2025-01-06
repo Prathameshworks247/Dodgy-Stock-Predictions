@@ -6,6 +6,7 @@ import TickerInputForm from './components/TickerInputForm';
 import TickerDisplay from './components/TickerDisplay';
 import LoadingPanel from './components/LoadingPanel';
 import ReportPanel from './components/ReportPanel';
+import TextToSpeech from './components/TextToSpeech';
 import { dates } from './utils/dates';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
@@ -130,7 +131,9 @@ function App() {
       {loading && <LoadingPanel message=<p className='text-white'>Processing...</p> />}
       
       {!loading && !error && report && (
-        <ReportPanel report={report} />
+        <><ReportPanel report={report} />
+          <TextToSpeech text = {report}/>
+        </>
       )}
       <h2 className='text-white'>ACCURATE 20% OF THE TIMES!!☺️</h2>
     </div>

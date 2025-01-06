@@ -19,7 +19,7 @@ const ReportPanel = ({ report }) => {
       <div className="p-1 bg-primary rounded shadow text-white mb-4"> <h3 className="text-xl font-semibold">Stock Analysis Report</h3></div>
         <div className="prose bg-white shadow rounded max-w-none p-3">
           <div className="text-black text-sm">
-            {report}
+            <p>{report}</p>
           </div>
         </div>
       </div>
