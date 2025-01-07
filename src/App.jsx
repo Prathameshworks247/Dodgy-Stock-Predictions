@@ -105,7 +105,9 @@ function App() {
       setLoading(false);
     }
   };
-
+  const head = {
+    fontFamily : 'cursive'
+  }
   return (
     <div className="App">
       <Header />
@@ -128,14 +130,14 @@ function App() {
         </div>
       )}
 
-      {loading && <LoadingPanel message=<p className='text-white'>Processing...</p> />}
+      {loading && <LoadingPanel message=<p style={head} className='text-white'>Cooking...</p> />}
       
       {!loading && !error && report && (
         <><ReportPanel report={report} />
           <TextToSpeech text = {report}/>
         </>
       )}
-      <h2 className='text-white'>ACCURATE 20% OF THE TIMES!!☺️</h2>
+      <h2 className='text-white' style={head}>Accurate 20% of the times!!☺️</h2>
     </div>
   );
 }

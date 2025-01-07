@@ -15,23 +15,30 @@ export default function TickerInputForm({ addTicker, tickers }) {
       setError('Ticker must be at least 3 characters long (e.g., TSLA).');
     }
   };
-
+  const inputStyle = {
+  color: '#ffd700' // Change this to your desired color
+  };
+  const head = {
+    fontFamily : 'cursive'
+  }
   return (
+
     <form onSubmit={handleSubmit} className='form'>
       <label htmlFor="ticker-input">
-        <h3 className='text-white'>Add up to 3 stock tickers to get a super accurate stock predictions report👇</h3>
+        <h3 className='text-white' style={head}>Add up to 3 stock tickers to get a super accurate(LOL) stock predictions report👇</h3>
       </label>
       <div className="border border-black">
         <input
-        className='form-control'
+        className='form-control bg-black border-black opacity-50 shadow'
           type="text"
           id="ticker-input"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="MSFT"
+          style={inputStyle}
           disabled={tickers.length >= 3}
         />
-        <button type="submit" disabled={tickers.length >= 3} className='btn btn-danger'>
+        <button type="submit" disabled={tickers.length >= 3} className='add-button rounded'>
           <img src="/images/add.svg" alt="add" className='btn '/>
         </button>
       </div>
