@@ -34,7 +34,7 @@ export default function TickerInputForm({ addTicker, tickers }) {
           id="ticker-input"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="MSFT"
+          placeholder="Eg. MSFT - Microsoft, TSLA - Tesla, GOOG - Google"
           style={inputStyle}
           disabled={tickers.length >= 3}
         />
